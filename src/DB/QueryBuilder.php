@@ -16,7 +16,6 @@ class QueryBuilder
             // echo 'Connected to the SQLite database successfully!';
         } else {
             echo 'Whoops, could not connect to the SQLite database!';
-            die();
         }
     }
     public function getData(string $table, string $attribute)
