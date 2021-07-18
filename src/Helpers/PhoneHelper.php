@@ -12,7 +12,7 @@ class PhoneHelper
     {
         foreach (BasePhoneValidation::VALIDATORS as $key => $validator) {
             preg_match('/' . $validator['regex'] . '/', $phone, $matches);
-            if (sizeof($matches) > 0) {
+            if (count($matches) > 0) {
                 $returnData['country'] = $key;
                 $returnData['state'] = BasePhoneValidation::PHONE_STATE_OK;
                 $returnData['countryCode'] = $validator['code'];
