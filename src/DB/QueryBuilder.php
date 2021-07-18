@@ -12,9 +12,7 @@ class QueryBuilder
     public function __construct()
     {
         $this->db = (new  ConnectionDB())->connect();
-        if ($this->db != null) {
-            // echo 'Connected to the SQLite database successfully!';
-        } else {
+        if ($this->db == null) {
             echo 'Whoops, could not connect to the SQLite database!';
         }
     }
